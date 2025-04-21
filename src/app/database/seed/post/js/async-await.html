@@ -1,0 +1,77 @@
+<article>
+  <section>
+    <h2>1. Where Does It Come From?</h2>
+    <p>
+      <strong>Origin</strong>: <strong>async/await</strong> is a programming paradigm first
+      introduced in C# and .NET, later adopted by JavaScript and other languages. It was created to
+      simplify asynchronous programming, making asynchronous code easier to write and read.
+    </p>
+    <p>
+      <strong>State Change</strong>: Before <strong>async/await</strong>, asynchronous programming
+      relied on callbacks and events, leading to "callback hell". With <strong>async/await</strong>,
+      asynchronous code structure became clearer and more synchronous in style.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. What Is It?</h2>
+    <p>
+      <strong>Definition</strong>: <strong>async/await</strong> allows developers to write
+      asynchronous code in a more synchronous manner. The <strong>async</strong> keyword declares a
+      function as asynchronous, while <strong>await</strong> waits for an asynchronous operation to
+      complete.
+    </p>
+    <p><strong>Three Key Principles</strong>:</p>
+    <ul>
+      <li>
+        <strong>Asynchronous Function Declaration</strong>: Functions declared with
+        <strong>async</strong> return a Promise.
+      </li>
+      <li>
+        <strong>Awaiting Promise Resolution</strong>: <strong>await</strong> is used inside
+        <strong>async</strong> functions to wait for Promise resolution.
+      </li>
+      <li>
+        <strong>Error Handling</strong>: Use <strong>try/catch</strong> to handle errors in
+        asynchronous operations.
+      </li>
+    </ul>
+    <p><strong>Practical Example</strong>:</p>
+    <p><em>Background</em>: Fetching data from the internet, an asynchronous operation.</p>
+    <p>
+      <em>Solution</em>: Use <strong>async/await</strong> in a function to await data fetching
+      completion.
+    </p>
+    <pre>
+            <code class="language-javascript">
+async function fetchData() {
+    try {
+        let response = await fetch('https://api.example.com/data');
+        let data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Fetching data failed', error);
+    }
+}
+            </code>
+        </pre>
+  </section>
+
+  <section>
+    <h2>3. Where Is It Going?</h2>
+    <p>
+      <strong>Limitations</strong>: <strong>async/await</strong> applies only to Promise-based
+      operations and not suitable for non-Promise async operations.
+    </p>
+    <p>
+      <strong>Optimization Direction</strong>: The industry is exploring better error handling and
+      integration of asynchronous flow control tools, like functional programming with
+      <strong>async/await</strong>.
+    </p>
+    <p>
+      <strong>Future Development</strong>: Potential for more language features and tools to
+      simplify asynchronous programming, improving concurrent processing and integration into
+      various programming environments.
+    </p>
+  </section>
+</article>

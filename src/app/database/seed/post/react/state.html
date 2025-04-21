@@ -1,0 +1,106 @@
+<article>
+  <section>
+    <h2>1. Where does it come from?</h2>
+    <p>
+      State is a core concept in React applications, used to control the behavior and rendering of
+      components.
+    </p>
+    <ul>
+      <li>
+        <strong>Origin</strong>: React's design philosophy is reactive and declarative, where the
+        concept of state provides a dynamic data source for components.
+      </li>
+      <li>
+        <strong>Comparison</strong>: Before React, traditional JavaScript DOM manipulation was
+        mostly imperative, involving direct DOM manipulation to change the interface. React
+        introduced the concept of state as a more efficient way to control interface updates.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. What is it?</h2>
+    <p>
+      In React, the state is an object that stores data affecting the rendering and behavior of a
+      component.
+    </p>
+    <ul>
+      <li>
+        <strong>Method of Solution</strong>: State allows components to update themselves based on
+        changes in user interaction or other factors.
+      </li>
+      <li>
+        <strong>Three Key Principles</strong>:
+        <ol>
+          <li>State should be as simple as possible to avoid unnecessary complexity.</li>
+          <li>
+            State updates may be asynchronous, so new state should not rely on the current state
+            value.
+          </li>
+          <li>
+            State should be limited to data that affects rendering, avoiding storing unrelated data
+            in the state.
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p><strong>Example</strong>:</p>
+    <dl>
+      <dt>Background</dt>
+      <dd>
+        Suppose there is a numeric counter component that needs to display and update a number
+        count.
+      </dd>
+      <dt>Application</dt>
+      <dd>
+        Use state to store the count value, and update the state to increase the count when a button
+        is clicked.
+      </dd>
+      <dt>Code Example</dt>
+      <dd>
+        <pre><code>
+class Counter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { count: 0 };
+    }
+
+    incrementCount = () => {
+        this.setState(prevState => ({
+            count: prevState.count + 1
+        }));
+    };
+
+    render() {
+        return (
+            &lt;div&gt;
+                &lt;p&gt;{this.state.count}&lt;/p&gt;
+                &lt;button onClick={this.incrementCount}&gt;Increment&lt;/button&gt;
+            &lt;/div&gt;
+        );
+    }
+}
+                </code></pre>
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>3. Where is it going?</h2>
+    <ul>
+      <li>
+        <strong>Limitations</strong>: Improper management of state can lead to components being
+        difficult to maintain, especially in large projects.
+      </li>
+      <li>
+        <strong>Direction for Optimization</strong>: Use state management libraries (like Redux,
+        MobX) or the Context API for better state sharing between components.
+      </li>
+      <li>
+        <strong>Future Development</strong>: Future versions of React may introduce more tools and
+        methods to simplify state management, enhancing the performance and maintainability of
+        applications.
+      </li>
+    </ul>
+  </section>
+</article>

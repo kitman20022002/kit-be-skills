@@ -1,0 +1,39 @@
+<article>
+  <section>
+      <h2>1. Why do we need Web Components?</h2>
+      <p><strong>Origin:</strong> The concept of Web Components originated from the need for encapsulation and reuse in web development.</p>
+      <p>Before Web Components, developers relied on specific frameworks or libraries for component creation, leading to non-standardized and technology stack dependent solutions.</p>
+  </section>
+  <section>
+      <h2>2. What Are They?</h2>
+      <p><strong>Essence:</strong> Web Components are a set of browser-native technologies allowing the creation of reusable custom elements.</p>
+      <ul>
+          <li><strong>Custom Elements:</strong> Define custom elements and behavior.</li>
+          <li><strong>Shadow DOM:</strong> Encapsulate markup and style.</li>
+          <li><strong>HTML Templates:</strong> `<template>` and `<slot>` tags for non-rendered markup on page load.</li>
+      </ul>
+
+      <h3>Key Principles</h3>
+      <ul>
+          <li>Encapsulation through Shadow DOM.</li>
+          <li>Reusability of custom elements.</li>
+          <li>Independence from specific frameworks or libraries.</li>
+      </ul>
+
+      <h3>Real-World Example</h3>
+      <pre><code class="language-javascript">&lt;template id="user-card-template"&gt;
+&lt;style&gt;
+  /* Encapsulated styles */
+&lt;/style&gt;
+&lt;div class="user-card"&gt;
+  &lt;slot name="name"&gt;&lt;/slot&gt;
+  <!-- Other content -->
+&lt;/div&gt;
+&lt;/template&gt;
+      </code></pre>
+  </section>
+  <section>
+      <h2>3. Where Are They Going?</h2>
+      <p>Web Components may become a standard in building complex web applications, with ongoing enhancements and broader browser support.</p>
+  </section>
+</article>

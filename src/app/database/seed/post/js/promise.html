@@ -1,0 +1,61 @@
+<article>
+  <h2>1. Why we need it?</h2>
+  <p>
+    Promises are an important concept in JavaScript for asynchronous programming. They were
+    introduced to address issues associated with traditional callback functions, such as callback
+    hell.
+  </p>
+  <p>
+    Before the introduction of Promises, asynchronous programming in JavaScript heavily relied on
+    callback functions. As applications became more complex, managing nested callbacks became
+    increasingly difficult. The introduction of Promises provided a clearer and more powerful way to
+    handle asynchronous operations.
+  </p>
+
+  <h2>2. What is it?</h2>
+  <p>
+    A Promise is an object that represents the eventual completion or failure of an asynchronous
+    operation.
+  </p>
+  <p>It has three states: pending, fulfilled, and rejected.</p>
+  <p>
+    A Promise object allows you to associate handlers with the success value or the reason for
+    failure.
+  </p>
+  <p>Three principles for using Promises:</p>
+  <ol>
+    <li>Prefer using Promises over traditional callback functions for asynchronous operations.</li>
+    <li>
+      Handle the success and failure of asynchronous operations by chaining
+      <strong>.then()</strong> and <strong>.catch()</strong>.
+    </li>
+    <li>
+      Use <strong>async</strong> and <strong>await</strong> syntax (introduced in ES2017) to make
+      asynchronous code look more like synchronous code.
+    </li>
+  </ol>
+  <p>Practical example:</p>
+  <p>Background: Fetching and processing data from the internet.</p>
+  <p>Application: Using Promises to manage the asynchronous nature of network requests.</p>
+  <p>Code example:</p>
+  <pre><code class="language-javascript">
+fetch('https://example.com/data')
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+    </code></pre>
+
+  <h2>3. Where is it going?</h2>
+  <p>
+    Limitations: Although Promises solve the problem of callback hell, they can still lead to
+    complex chained calls when handling multiple asynchronous operations.
+  </p>
+  <p>
+    Current optimization direction: Combining <strong>async</strong> and <strong>await</strong> to
+    simplify the usage of Promises, making asynchronous code more intuitive and maintainable.
+  </p>
+  <p>
+    Possible future development: As JavaScript and web development continue to evolve, more
+    efficient and powerful patterns and tools for handling asynchronous operations may emerge.
+  </p>
+</article>

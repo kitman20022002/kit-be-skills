@@ -1,0 +1,64 @@
+<article>
+  <h2>1. Where Does It Come From?</h2>
+  <p>
+    <strong>Origin and Background</strong>: The <strong>this</strong> keyword exists in many
+    object-oriented programming languages, but its behavior in JavaScript is quite unique. Initially
+    designed as a simple client-side scripting language, JavaScript has evolved into a powerful,
+    feature-rich language, with <strong>this</strong> playing a crucial role in this evolution.
+  </p>
+  <p>
+    <strong>Comparative State</strong>: Before JavaScript, web page interactions were relatively
+    simple. With the introduction of JavaScript, the <strong>this</strong> keyword became a way to
+    reference dynamic context, allowing functions and methods to be reused in different contexts.
+  </p>
+
+  <h2>2. What Is It?</h2>
+  <p>
+    <strong>Essential Explanation</strong>: In JavaScript, <strong>this</strong> typically refers to
+    the context object that the function is being called upon. Its value depends on how the function
+    is called, not how it's defined.
+  </p>
+  <p><strong>Key Principles</strong>:</p>
+  <ol>
+    <li>
+      <strong>Context-Dependent</strong>: The value of <strong>this</strong> is usually determined
+      when the function is called, not when it's defined.
+    </li>
+    <li>
+      <strong>Strict Mode Differences</strong>: In strict mode ('use strict'), the value of
+      <strong>this</strong> in global functions is <strong>undefined</strong>, whereas in non-strict
+      mode, it is the global object.
+    </li>
+    <li>
+      <strong>Arrow Function Characteristics</strong>: In arrow functions, <strong>this</strong> is
+      lexically bound to the context where it is defined.
+    </li>
+  </ol>
+  <p><strong>Real-World Example</strong>:</p>
+  <pre>
+      <code class="language-javascript">
+          const person = {
+              name: 'Alice',
+              greet: function() {
+                  console.log('Hello, my name is ' + this.name);
+              }
+          };
+          person.greet();  // Outputs "Hello, my name is Alice"
+      </code>
+      </pre>
+
+  <h2>3. Where Is It Going?</h2>
+  <p>
+    <strong>Limitations</strong>: The dynamic nature of <strong>this</strong> can sometimes lead to
+    confusion, especially in callback functions and closures.
+  </p>
+  <p>
+    <strong>Optimization Direction</strong>: Modern JavaScript frameworks and libraries (like React)
+    offer clearer and more concise ways to handle <strong>this</strong>, such as using arrow
+    functions to avoid common pitfalls of <strong>this</strong>.
+  </p>
+  <p>
+    <strong>Future Developments</strong>: As the ECMAScript standard continues to evolve, the
+    understanding and use of <strong>this</strong> may become more intuitive and consistent.
+  </p>
+</article>

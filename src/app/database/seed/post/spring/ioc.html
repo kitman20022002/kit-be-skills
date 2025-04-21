@@ -1,0 +1,69 @@
+<article>
+  <h2>1. Where does it come from?</h2>
+  <p>
+    <strong>Origin</strong>: Inversion of Control (IoC) as a software design principle aims to
+    reduce the coupling between computer codes. The emergence of IoC containers in Java,
+    particularly in modern frameworks like Spring, was intended to further implement this principle.
+  </p>
+  <ul>
+    <li>
+      <strong>Before its emergence</strong>: Before the advent of IoC containers, objects were
+      typically created and managed directly in the code, leading to high coupling and difficulty in
+      testing.
+    </li>
+    <li>
+      <strong>After its emergence</strong>: The introduction of IoC containers changed the way
+      objects are created and managed, allowing developers to focus more on business logic while
+      improving code maintainability and scalability.
+    </li>
+  </ul>
+
+  <h2>2. What is it?</h2>
+  <p>
+    <strong>Essence</strong>: An IoC container is a framework or library that manages the creation,
+    configuration, and lifecycle of objects in a Java application. It manages objects by inverting
+    control, meaning that the container takes over the creation and management of objects.
+  </p>
+  <ul>
+    <li>
+      <strong>Inversion of Control</strong>: Objects no longer create and manage dependencies
+      themselves; instead, the container is responsible for this.
+    </li>
+    <li>
+      <strong>Dependency Injection</strong>: The container provides the necessary dependencies to
+      objects through Dependency Injection (DI).
+    </li>
+    <li>
+      <strong>Declarative Management</strong>: The configuration of objects and their dependencies
+      is usually declared through configuration files or annotations, without the need for hard
+      coding in Java code.
+    </li>
+  </ul>
+  <p><strong>Case Explanation</strong>:</p>
+  <ol>
+    <li>
+      <strong>Background</strong>: Suppose there is a class in a Java application that requires
+      multiple service components.
+    </li>
+    <li>
+      <strong>Solution</strong>: With an IoC container, the class does not need to create and manage
+      these service components itself. The container automatically injects the required components,
+      allowing the class to focus on its business logic.
+    </li>
+  </ol>
+
+  <h2>3. Where is it going?</h2>
+  <p>
+    <strong>Limitations</strong>: Using an IoC container might lead to complex project structures
+    and can be challenging for beginners to understand and master.
+  </p>
+  <p>
+    <strong>Optimization Direction</strong>: Currently, the industry is moving towards simplifying
+    the configuration and use of IoC containers to improve their usability and flexibility.
+  </p>
+  <p>
+    <strong>Future Development</strong>: In the future, IoC containers may become more automated and
+    intelligent, for instance, through more advanced dependency resolution and management mechanisms
+    to enhance efficiency and reduce configuration errors.
+  </p>
+</article>

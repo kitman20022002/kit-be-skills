@@ -1,0 +1,58 @@
+<article>
+  <section>
+    <h2>What is Fibers?</h2>
+    <p>
+      A Fiber is an instance of a component in React, representing a unit of work in the UI. Fibers
+      restructure the rendering process into a linked list, optimizing resource allocation and
+      rendering performance.
+    </p>
+  </section>
+
+  <section>
+    <h2>Origin and Purpose</h2>
+    <ul>
+      <li>
+        <strong>Background</strong>: React's initial rendering process, before Fibers, was based on
+        a recursive call stack, which had limitations in handling intensive UI updates and
+        animations.
+      </li>
+      <li>
+        <strong>Why Fibers?</strong>: Introduced to enhance React's ability to handle complex UIs
+        and improve performance for applications with heavy rendering tasks.
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Key Features and Principles</h2>
+    <ol>
+      <li>
+        <strong>Incremental Rendering</strong>: Fibers allow React to split rendering work into
+        chunks and spread it out over multiple frames.
+      </li>
+      <li>
+        <strong>Prioritization of Tasks</strong>: Enables prioritizing updates based on importance,
+        improving responsiveness.
+      </li>
+      <li>
+        <strong>Concurrency</strong>: Allows pausing, resuming, or aborting rendering tasks,
+        enhancing efficiency.
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Impact and Use</h2>
+    <p>
+      Fibers contribute to smoother, more responsive user interfaces and maintain a familiar API for
+      React developers.
+    </p>
+  </section>
+
+  <section>
+    <h2>Future Directions</h2>
+    <p>
+      Lays the foundation for future improvements in React, like Concurrent Mode, further enhancing
+      rendering and update handling.
+    </p>
+  </section>
+</article>

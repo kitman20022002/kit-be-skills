@@ -1,0 +1,77 @@
+<article>
+  <h2>1. Where does it come from?</h2>
+  <p>
+    <strong>Origin</strong>: The concepts of concurrency and multithreading originated from the need
+    in computer science to improve the efficiency and responsiveness of programs. With the
+    proliferation of multi-core processors, these concepts have been widely applied in Java.
+  </p>
+  <ul>
+    <li>
+      <strong>Before their emergence</strong>: Before the advent of multithreading and concurrency
+      mechanisms, programs typically executed tasks sequentially in a single-threaded manner, unable
+      to fully utilize the advantages of multi-core processors.
+    </li>
+    <li>
+      <strong>After their emergence</strong>: With the introduction of concurrency and
+      multithreading, Java programs can execute tasks simultaneously on multiple cores,
+      significantly enhancing execution efficiency and responsiveness.
+    </li>
+  </ul>
+
+  <h2>2. What is it?</h2>
+  <p><strong>Essence</strong>:</p>
+  <ul>
+    <li>
+      <strong>Concurrency</strong>: Refers to multiple tasks being executed macroscopically at the
+      same time, but they might alternate execution microscopically, not necessarily running
+      simultaneously.
+    </li>
+    <li>
+      <strong>Multithreading</strong>: A means of achieving concurrency, where multiple threads are
+      created to run tasks on different execution paths.
+    </li>
+  </ul>
+  <p><strong>Three Principles</strong>:</p>
+  <ol>
+    <li>
+      <strong>Thread Safety</strong>: Ensuring that the access to shared data in a multi-threaded
+      environment does not lead to inconsistencies or data corruption.
+    </li>
+    <li>
+      <strong>Lock Mechanism</strong>: Using locks or other synchronization mechanisms to prevent
+      multiple threads from accessing shared resources simultaneously.
+    </li>
+    <li>
+      <strong>Resource Management</strong>: Efficiently managing thread resources, including their
+      creation, use, and destruction.
+    </li>
+  </ol>
+  <p><strong>Case Explanation</strong>:</p>
+  <ol>
+    <li>
+      <strong>Background</strong>: Suppose you need to handle multiple concurrent user requests in a
+      web server.
+    </li>
+    <li>
+      <strong>Solution</strong>: Multithreading technology can be used to create a thread pool.
+      Whenever there's a new user request, a thread from the pool is allocated to handle it, thereby
+      improving response speed and processing efficiency.
+    </li>
+  </ol>
+
+  <h2>3. Where is it going?</h2>
+  <p>
+    <strong>Limitations</strong>: Multithreaded programming is complex and prone to errors,
+    especially when it involves thread synchronization and shared data.
+  </p>
+  <p>
+    <strong>Optimization Direction</strong>: Currently, the industry is moving towards developing
+    more advanced concurrency control mechanisms, such as using concurrency frameworks and libraries
+    (like Java's java.util.concurrent package) to simplify multithreaded programming.
+  </p>
+  <p>
+    <strong>Future Development</strong>: In the future, Java might further integrate smarter thread
+    management and concurrency control technologies to increase efficiency and reduce programming
+    complexity.
+  </p>
+</article>

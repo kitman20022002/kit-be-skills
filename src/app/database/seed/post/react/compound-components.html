@@ -1,0 +1,71 @@
+<article>
+  <h1>Compound Components</h1>
+
+  <h2>1. Where does it come from?</h2>
+  <p>
+    <strong>Origin</strong>: Compound Components is a design pattern commonly used in front-end
+    development, especially with modern JavaScript libraries and frameworks like React. It emerged
+    to address the issues of state management and reusability in User Interface (UI) components.
+  </p>
+  <ul>
+    <li>
+      <strong>Before its emergence</strong>: Prior to compound components, developers typically
+      managed interactions between components by passing callbacks and state, which could lead to
+      complex and hard-to-maintain code structures.
+    </li>
+    <li>
+      <strong>After its emergence</strong>: With the introduction of compound components, developers
+      could manage relationships and states between components more concisely, enhancing code
+      readability and maintainability.
+    </li>
+  </ul>
+
+  <h2>2. What is it?</h2>
+  <p>
+    <strong>Essence</strong>: The compound component pattern allows you to decompose a component
+    into several closely related subcomponents, each responsible for rendering a part of the
+    interface, while still collectively forming a unified component.
+  </p>
+  <ul>
+    <li>
+      <strong>Modularity</strong>: Each subcomponent is independent and can be used alone or in
+      combination with other components.
+    </li>
+    <li>
+      <strong>Reusability</strong>: Subcomponents are designed to ensure sufficient flexibility and
+      reusability.
+    </li>
+    <li>
+      <strong>State Management</strong>: The parent component usually manages the state, and the
+      subcomponents receive the state and callbacks through props.
+    </li>
+  </ul>
+  <p><strong>Case Explanation</strong>:</p>
+  <ol>
+    <li>
+      <strong>Background</strong>: Suppose you need to create a customizable tab component in a web
+      application.
+    </li>
+    <li>
+      <strong>Solution</strong>: You can create a compound component that includes a parent
+      component (TabContainer) managing the state, and child components (TabItem) representing each
+      tab. This way, you can reuse the TabItem component in different places, with all state
+      management handled by the TabContainer.
+    </li>
+  </ol>
+
+  <h2>3. Where is it going?</h2>
+  <p>
+    <strong>Limitations</strong>: Compound components can lead to overly complex component
+    structures, especially in large projects, and may be difficult to understand for beginners.
+  </p>
+  <p>
+    <strong>Optimization Direction</strong>: The current industry trend is to simplify the API
+    design of compound components to improve their readability and usability.
+  </p>
+  <p>
+    <strong>Future Development</strong>: In the future, compound components might be integrated with
+    more front-end development technologies (like micro-frontends) to further enhance component
+    maintainability and scalability.
+  </p>
+</article>

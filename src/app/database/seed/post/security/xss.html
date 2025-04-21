@@ -1,0 +1,72 @@
+<article>
+  <h2>1. Where does it come from?</h2>
+  <p>
+    <strong>Origin</strong>: XSS (Cross-Site Scripting) vulnerabilities exist in all front-end
+    frameworks, including React. They occur when an application fails to properly encode or escape
+    user input, leading to the embedding and execution of malicious scripts.
+  </p>
+  <p>
+    <strong>Comparative State</strong>: Before the advent of modern front-end frameworks like React,
+    XSS attacks were mainly executed by directly inserting malicious code into HTML. React reduces
+    this risk by automatically escaping HTML, but XSS threats can still arise if not used properly,
+    especially in certain scenarios.
+  </p>
+
+  <h2>2. What is it?</h2>
+  <p>
+    <strong>Concept Explanation</strong>: In React, XSS typically occurs when developers incorrectly
+    handle user input, directly inserting it into the component's output, especially when using the
+    <code>dangerouslySetInnerHTML</code> property. This can lead to unauthorized code execution,
+    such as JavaScript scripts.
+  </p>
+  <p><strong>Defensive Principles</strong>:</p>
+  <ol>
+    <li>
+      <strong>Safely Handle User Input</strong>: Never trust user input, always sanitize and escape
+      all inputs appropriately.
+    </li>
+    <li>
+      <strong>Avoid Using <code>dangerouslySetInnerHTML</code></strong
+      >: Use this property sparingly and only when absolutely necessary.
+    </li>
+    <li>
+      <strong>Utilize Security Libraries</strong>: Employ libraries like DOMPurify to clean inputs
+      that may contain dangerous content.
+    </li>
+  </ol>
+  <p><strong>Real-world Example</strong>:</p>
+  <ul>
+    <li>
+      <strong>Background</strong>: A social media app allows users to post comments but fails to
+      properly handle user inputs.
+    </li>
+    <li>
+      <strong>Problem</strong>: Attackers insert JavaScript code in the comments, which executes
+      when other users view the comment.
+    </li>
+    <li>
+      <strong>Solution</strong>: Properly sanitize and escape user inputs to ensure no malicious
+      scripts are executed.
+    </li>
+  </ul>
+  <pre>
+    <code>
+    class UnsafeComponent extends React.Component {
+        render() {
+          // Extremely dangerous: Directly injecting user-controlled content into the HTML
+          return <div dangerouslySetInnerHTML={{ __html: this.props.userInput }} />;
+        }
+      }
+    </code>
+  </pre>
+  <h2>3. Where is it going?</h2>
+  <p>
+    <strong>Challenges</strong>: With the ongoing development of React and other front-end
+    technologies, there's a continuous need to stay vigilant about new security threats and
+    defensive methods.
+  </p>
+  <p>
+    <strong>Future Developments</strong>: Enhanced security features and more intelligent static
+    analysis tools may be developed to automatically identify and prevent potential XSS attacks.
+  </p>
+</article>

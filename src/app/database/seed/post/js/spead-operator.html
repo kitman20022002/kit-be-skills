@@ -1,0 +1,90 @@
+<article>
+  <h1>Understanding the Spread Operator in JavaScript</h1>
+
+  <section>
+    <h2>1. Where does it come from?</h2>
+    <p>The spread operator is a JavaScript syntax feature introduced in ES6 (ECMAScript 2015).</p>
+    <ul>
+      <li>
+        <strong>Origin</strong>: It was designed to simplify the manipulation of arrays and objects,
+        especially in copying, merging, or extending them.
+      </li>
+      <li>
+        <strong>Comparison</strong>: Before ES6, merging arrays or objects typically required
+        functions like <code>concat</code>, or loops. The spread operator offers a more concise way
+        to perform these operations.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. What is it?</h2>
+    <p>
+      The spread operator (<code>...</code>) allows an expression to be expanded into multiple
+      elements (in arrays) or multiple properties (in objects).
+    </p>
+    <ul>
+      <li>
+        <strong>Method of Solution</strong>: It makes copying and merging arrays or objects simpler
+        and more intuitive.
+      </li>
+      <li>
+        <strong>Three Key Principles</strong>:
+        <ol>
+          <li>
+            Use the spread operator when copying arrays or objects to avoid directly modifying the
+            original data.
+          </li>
+          <li>
+            Use it when needing to merge elements/properties of arrays or objects into a new array
+            or object.
+          </li>
+          <li>It can be used in function calls to pass array elements as arguments.</li>
+        </ol>
+      </li>
+    </ul>
+    <p><strong>Example</strong>:</p>
+    <dl>
+      <dt>Background</dt>
+      <dd>
+        Suppose you need to merge two arrays or merge the properties of one object into another.
+      </dd>
+      <dt>Application</dt>
+      <dd>Use the spread operator to simplify this process.</dd>
+      <dt>Code Example</dt>
+      <dd>
+        <pre><code>
+// Merging arrays
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+let mergedArr = [...arr1, ...arr2]; // [1, 2, 3, 4, 5, 6]
+
+// Merging objects
+let obj1 = { a: 1, b: 2 };
+let obj2 = { c: 3, d: 4 };
+let mergedObj = { ...obj1, ...obj2 }; // { a: 1, b: 2, c: 3, d: 4 }
+                </code></pre>
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>3. Where is it going?</h2>
+    <ul>
+      <li>
+        <strong>Limitations</strong>: The spread operator can only perform shallow copies; for
+        deeply nested objects, it cannot copy the references of inner nested objects.
+      </li>
+      <li>
+        <strong>Direction for Optimization</strong>: When dealing with deeply nested objects,
+        consider using other methods like <code>JSON.parse(JSON.stringify(object))</code> for deep
+        copying.
+      </li>
+      <li>
+        <strong>Future Development</strong>: The use of the spread operator might become more
+        widespread as the JavaScript language evolves, especially in handling immutable data,
+        functional programming, and similar scenarios.
+      </li>
+    </ul>
+  </section>
+</article>

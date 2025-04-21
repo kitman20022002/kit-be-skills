@@ -1,0 +1,78 @@
+<article>
+  <h2>1. Where does it come from?</h2>
+  <p>
+    <strong>Origin</strong>: The issue of IDOR arises from an application's failure to adequately
+    verify whether a user is authorized to access a specific object. This is often associated with
+    insecure data access patterns, such as directly using object references from user input (like
+    URL parameters).
+  </p>
+  <p>
+    <strong>Comparative State</strong>: In the context of more security-conscious modern application
+    development, stricter access controls are usually implemented. However, if these security
+    measures are overlooked by developers, IDOR issues can still occur.
+  </p>
+
+  <h2>2. What is it?</h2>
+  <p>
+    <strong>Concept Explanation</strong>: IDOR occurs when an attacker can access data they
+    shouldn't by manipulating object references in URLs, form fields, or query parameters. For
+    example, accessing other users' data by changing the user ID in a URL.
+  </p>
+  <p><strong>Defensive Principles</strong>:</p>
+  <ol>
+    <li>
+      <strong>Strict Access Control</strong>: Ensure the application verifies a user's access rights
+      before accessing any sensitive object.
+    </li>
+    <li>
+      <strong>Avoid Direct Object References</strong>: Use indirect references (like tokens or
+      randomly generated IDs) instead of direct references.
+    </li>
+    <li>
+      <strong>Thorough Input Validation</strong>: Validate all user-supplied inputs to prevent
+      malicious manipulation.
+    </li>
+  </ol>
+  <p><strong>Real-world Example</strong>:</p>
+  <ul>
+    <li>
+      <strong>Background</strong>: An online file storage service allows users to access their files
+      directly through a URL.
+    </li>
+    <li>
+      <strong>Problem</strong>: Attackers access other users' private files by simply modifying the
+      file ID in the URL.
+    </li>
+    <li>
+      <strong>Solution</strong>: Implement role-based access control and use indirect references to
+      access files.
+    </li>
+  </ul>
+  <pre>
+    <code>
+        class UserDetails extends React.Component {
+            componentDidMount() {
+              const userId = this.props.match.params.id; // User ID from URL
+          
+              // Dangerous: Fetching user details based on user-modifiable input without proper authorization
+              fetch(`/api/users/${userId}`)
+                .then(response => response.json())
+                .then(data => this.setState({ user: data }));
+            }
+          
+            render() {
+              // Render user details
+            }
+          }         
+    </code>
+  </pre>
+  <h2>3. Where is it going?</h2>
+  <p>
+    <strong>Challenges</strong>: As applications become more complex, maintaining effective access
+    control and preventing IDOR attacks becomes increasingly difficult.
+  </p>
+  <p>
+    <strong>Future Developments</strong>: Develop more advanced security strategies and tools, such
+    as using AI to identify and prevent IDOR vulnerabilities.
+  </p>
+</article>

@@ -1,0 +1,88 @@
+<article>
+  <h2>1. Why we need control flow?</h2>
+  <p>
+    Control structures are fundamental components in programming languages used to control the flow
+    of code execution. They originated from early programming language designs, aiming to provide
+    more flexible and effective code execution paths.
+  </p>
+  <p>
+    Before the appearance of JavaScript and other programming languages, program execution was
+    typically linear. The introduction of these control structures allowed programmers to execute
+    code based on conditions or repeat certain code, making programs more dynamic and flexible.
+  </p>
+
+  <h2>2. What is it?</h2>
+  <p>JavaScript control structures mainly include:</p>
+  <ul>
+    <li>
+      Conditional statements: <b>if</b> and <b>else</b>, used for executing code blocks based on
+      specific conditions.
+    </li>
+    <li>
+      Selection statements: <b>switch</b>, used for executing different code blocks under multiple
+      conditions.
+    </li>
+    <li>
+      Loop statements: <b>for</b>, <b>while</b>, and <b>do-while</b>, used for repeatedly executing
+      code blocks until a condition is no longer true.
+    </li>
+    <li>
+      Jump statements: <b>break</b> and <b>continue</b>, used for exiting loops early or skipping
+      the current loop iteration.
+    </li>
+  </ul>
+  <p>Three principles for applying these control structures:</p>
+  <ol>
+    <li>
+      Choose the appropriate control structure based on the actual situation to simplify code logic
+      and improve efficiency.
+    </li>
+    <li>Be cautious to avoid infinite loops and overly complex conditionals.</li>
+    <li>
+      Use <b>break</b> and <b>continue</b> judiciously to control the loop flow, enhancing code
+      readability and efficiency.
+    </li>
+  </ol>
+  <p>Practical example:</p>
+  <p>Background: Assign grades based on user-entered scores.</p>
+  <p>Application: Use <b>if-else</b> and <b>switch</b> to handle different score ranges.</p>
+  <p>Code example:</p>
+  <pre><code class="language-javascript">
+&lt;script&gt;
+let score = 85;
+if (score &gt;= 90) {
+console.log("Excellent");
+} else if (score &gt;= 75) {
+console.log("Good");
+} else {
+console.log("Pass");
+}
+
+switch (true) {
+case score &gt;= 90:
+    console.log("Excellent");
+    break;
+case score &gt;= 75:
+    console.log("Good");
+    break;
+default:
+    console.log("Pass");
+}
+&lt;/script&gt;
+</code></pre>
+
+  <h2>3. Where is it going?</h2>
+  <p>
+    Limitations: Overuse or improper use of control structures can make code difficult to understand
+    and maintain.
+  </p>
+  <p>
+    Current optimization direction: In modern JavaScript development, it's recommended to use more
+    concise and expressive control structures, such as arrow functions and Promise structures.
+  </p>
+  <p>
+    Possible future developments: New control structures may emerge to adapt to more complex
+    programming patterns and demands, like further advancements in asynchronous programming and
+    functional programming.
+  </p>
+</article>

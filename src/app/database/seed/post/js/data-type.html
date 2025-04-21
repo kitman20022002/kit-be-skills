@@ -1,0 +1,67 @@
+<article>
+    <div>1. Why we need data type?</div>
+    <p>
+      The concept of data types in JavaScript originates from the need to categorize data in
+      programming languages. It was developed to better manage and use data during programming.
+    </p>
+    <p>
+      Before the advent of JavaScript, other programming languages like C or Java already had their
+      own data type systems. The emergence of JavaScript provided a set of data types more suited
+      for web pages and web applications.
+    </p>
+  </div>
+
+  <div>
+    <div>2. What is it?</div>
+    <p>
+      JavaScript data types are mainly divided into two categories: primitive types and object
+      types.
+    </p>
+    <ul>
+      <li>
+        Primitive types include: String, Number, Boolean, Undefined, Null, Symbol (added in ES6),
+        BigInt (large integer, added in ES2020).
+      </li>
+      <li>Object types are a composite type, including: Object, Array, Function, etc.</li>
+    </ul>
+    <p>Three principles for applying these data types:</p>
+    <ol>
+      <li>Choose the appropriate type for efficient data handling.</li>
+      <li>Avoid unnecessary type conversions to reduce errors and improve performance.</li>
+      <li>Understand the mechanisms of conversion and comparison between types.</li>
+    </ol>
+    <p>Practical example:</p>
+    <ul>
+      <li>Background: Collecting age information from users in a web form.</li>
+      <li>
+        Application: The user's age input (a string) needs to be converted to a number type for
+        comparison or calculation.
+      </li>
+      <li>
+        Code example:
+        <pre><code class="language-javascript">
+&lt;script&gt;
+let ageString = "30"; // User-entered age, string type
+let ageNumber = Number(ageString); // Convert to number type
+if (ageNumber &gt;= 18) {
+console.log("Adult");
+}
+&lt;/script&gt;</code></pre>
+      </li>
+    </ul>
+  </div>
+  <div class="section">
+    <div class="section-title">3. Where is it going?</div>
+    <p>
+      Limitations: Certain JavaScript data types (like global variables) may lead to memory leaks.
+      Additionally, type conversions can cause unexpected errors.
+    </p>
+    <p>
+      Current optimization direction: Enhancing the strictness and consistency of the type system,
+      as seen with the introduction of TypeScript.
+    </p>
+    <p>
+      Future development: There might be the addition of new data types or optimization of existing
+      types' memory and performance to suit more complex application scenarios.
+    </p>
+</article>

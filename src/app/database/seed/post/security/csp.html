@@ -1,0 +1,61 @@
+<article>
+  <h2>1. Where does it come from?</h2>
+  <p>
+    <strong>Origin and Purpose</strong>: The Content Security Policy (CSP) is a browser feature
+    designed to enhance web security. Its main purpose is to prevent cross-site scripting (XSS)
+    attacks and other code injection attacks. CSP achieves this by specifying trusted sources of
+    content.
+  </p>
+  <p>
+    <strong>State Comparison</strong>: Before the introduction of CSP, websites primarily relied on
+    server-side security measures to prevent attacks. The introduction of CSP enabled browsers to
+    participate in security protection, providing an additional layer of security for web pages.
+  </p>
+
+  <h2>2. What is it?</h2>
+  <p>
+    <strong>Concept Explanation</strong>: CSP allows website administrators to define which content
+    sources are trustworthy, thereby limiting the resources that a webpage can load and execute. It
+    is typically set via HTTP headers, such as <code>Content-Security-Policy</code>.
+  </p>
+  <p><strong>Three Key Principles</strong>:</p>
+  <ol>
+    <li>
+      <strong>Whitelist Sources</strong>: Only allow content to be loaded from predefined whitelist
+      sources.
+    </li>
+    <li>
+      <strong>Restrict Various Resources</strong>: Including scripts, stylesheets, images, media
+      files, frames, etc.
+    </li>
+    <li>
+      <strong>Reporting and Monitoring</strong>: Provide a reporting mechanism for policy violations
+      to help identify and resolve security issues.
+    </li>
+  </ol>
+  <p><strong>Real-world Example</strong>:</p>
+  <ul>
+    <li>
+      <strong>Background</strong>: A website wants to ensure that only scripts from specific domains
+      can be executed.
+    </li>
+    <li>
+      <strong>Solution</strong>: By setting CSP to only allow scripts from specific sources,
+      potential malicious injections are prevented.
+    </li>
+  </ul>
+
+  <h2>3. Where is it going?</h2>
+  <p>
+    <strong>Limitations</strong>: Implementing CSP can pose challenges in website compatibility and
+    maintenance, especially when dealing with third-party components.
+  </p>
+  <p>
+    <strong>Optimization Direction</strong>: Continuously refine the precision of policies, while
+    developing more user-friendly and flexible configuration methods.
+  </p>
+  <p>
+    <strong>Future Developments</strong>: The evolution of CSP may focus more on automation and
+    integrating other security features to enhance the overall security and usability of websites.
+  </p>
+</article>

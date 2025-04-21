@@ -1,0 +1,53 @@
+<article>
+  <h2>1. Where Does It Come From?</h2>
+  <p>
+    <strong>Origin and Background</strong>: The concept of the Event Loop originated from early
+    computer system designs, but it has found a particular application in JavaScript. JavaScript is
+    a single-threaded language, and in web browsers and Node.js environments, the event loop
+    mechanism enables asynchronous programming.
+  </p>
+  <p>
+    <strong>Comparative State</strong>: Before the event loop, programs typically executed in a
+    blocking manner, leading to inefficiency. With the event loop, JavaScript can remain responsive
+    while executing long-running tasks, improving performance and user experience.
+  </p>
+
+  <h2>2. What Is It?</h2>
+  <p>
+    <strong>Essential Explanation</strong>: The event loop is a part of the JavaScript runtime
+    environment, responsible for coordinating code execution, event handling, and message
+    processing. It continually checks if the call stack is empty and, if so, takes the next message
+    from the queue (e.g., from setTimeout, user interactions) and executes it.
+  </p>
+  <p><strong>Key Principles</strong>:</p>
+  <ol>
+    <li>
+      <strong>Non-blocking</strong>: The event loop allows JavaScript to perform asynchronous
+      operations without blocking the main thread.
+    </li>
+    <li>
+      <strong>Order Guarantee</strong>: The event loop ensures that events in the message queue are
+      processed in order.
+    </li>
+    <li>
+      <strong>Coordinated Handling</strong>: It works in conjunction with the call stack and message
+      queue to keep the program running smoothly.
+    </li>
+  </ol>
+
+  <h2>3. Where Is It Going?</h2>
+  <p>
+    <strong>Limitations</strong>: The event loop model can lead to complex asynchronous coding
+    patterns, which are hard to debug and maintain.
+  </p>
+  <p>
+    <strong>Optimization Direction</strong>: Modern JavaScript frameworks and tools (like
+    Async/Await, Promises) provide more intuitive and concise ways to handle asynchronous
+    operations, making interactions with the event loop more user-friendly.
+  </p>
+  <p>
+    <strong>Future Developments</strong>: With the advent of new programming models and language
+    features, the concept of the event loop might become further abstracted, offering developers
+    more efficient and manageable tools for asynchronous programming.
+  </p>
+</article>

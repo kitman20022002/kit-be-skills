@@ -1,0 +1,80 @@
+<article>
+  <section>
+    <h2>1. Why do we need variable declarations (var,let,const) ?</h2>
+    <p>
+      <strong>variable declarations: </strong> Was designed to store data values in a program and
+      allow these values to be used in different parts of the program, without it data management in
+      programs was more complex, requiring manual management of data storage and retrieval in
+      memory.
+    </p>
+    <p>
+      <strong>var:</strong> var was introduced in the early versions of JavaScript for variable
+      declaration.
+    </p>
+    <p>
+      <strong>let and const:</strong> let and const were introduced in ES6 (ECMAScript 2015) to
+      address some issues with var, such as hoisting and scope confusion.
+    </p>
+  </section>
+
+  <section>
+    <h2>2. What the difference?</h2>
+    <h3>var</h3>
+    <ul>
+      <li><strong>Scope:</strong> Function scope.</li>
+      <li>
+        <strong>Hoisting:</strong> Variable declarations are hoisted to the top of the function or
+        global scope.
+      </li>
+      <li><strong>Reassignable:</strong> Yes.</li>
+    </ul>
+
+    <h3>let</h3>
+    <ul>
+      <li><strong>Scope:</strong> Block scope (e.g., within {}).</li>
+      <li><strong>Hoisting:</strong> Does not hoist.</li>
+      <li><strong>Reassignable:</strong> Yes.</li>
+    </ul>
+
+    <h3>const</h3>
+    <ul>
+      <li><strong>Scope:</strong> Block scope.</li>
+      <li><strong>Hoisting:</strong> Does not hoist.</li>
+      <li><strong>Reassignable:</strong> No, it declares a constant.</li>
+    </ul>
+
+    <h4>Real-World Example</h4>
+    <p>Declaring a variable in a loop, needing to reassign it in each iteration.</p>
+    <pre><code class="language-javascript">
+for (var i = 0; i < 5; i++) {
+    // Using var, i is accessible outside the loop
+}
+
+for (let j = 0; j < 5; j++) {
+    // Using let, j is only valid within this loop block
+}
+
+const k = 5;
+// Using const, the value of k cannot change
+            </code></pre>
+  </section>
+
+  <section>
+    <h2>3. Where Are They Going?</h2>
+    <p>
+      <strong>Limitations:</strong>
+      var: Can lead to scope-related errors. let and const: Relatively stricter, requiring clearer
+      scope management.
+    </p>
+    <p>
+      <strong>Optimization Direction:</strong>
+      Gradually decrease the use of var in favor of let and const for safer, more predictable code
+      behavior.
+    </p>
+    <p>
+      <strong>Future Development:</strong>
+      The JavaScript community and standards are leaning towards more use of let and const to
+      promote maintainability and readability of code.
+    </p>
+  </section>
+</article>

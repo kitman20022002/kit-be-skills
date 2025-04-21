@@ -1,0 +1,78 @@
+<article>
+  <h2>1. Where does it come from?</h2>
+  <p>
+    <strong>Origin</strong>: In React applications, critical security token exposure often results
+    from insecure handling and storage of tokens. For instance, storing sensitive tokens in
+    client-accessible locations (like localStorage) can lead to exposure.
+  </p>
+  <p>
+    <strong>Comparative State</strong>: In modern web development, as the use of front-end
+    frameworks and client-side storage increases, this risk becomes more pronounced. Previously,
+    sensitive data was handled more on the server side, with relatively lower exposure risks.
+  </p>
+
+  <h2>2. What is it?</h2>
+  <p>
+    <strong>Concept Explanation</strong>: In React, critical security token exposure can occur if
+    sensitive tokens (like JWT tokens, API keys) are stored or transmitted insecurely on the client
+    side. This includes, but is not limited to, storage in localStorage, plaintext transmission in
+    client-side JavaScript, or insecure usage of HTTP cookies.
+  </p>
+  <p><strong>Defensive Principles</strong>:</p>
+  <ol>
+    <li>
+      <strong>Secure Storage</strong>: Avoid storing sensitive tokens in locations vulnerable to XSS
+      attacks.
+    </li>
+    <li>
+      <strong>Secure Transmission</strong>: Use HTTPS to protect data transmitted between the client
+      and the server.
+    </li>
+    <li>
+      <strong>Minimize Exposure</strong>: Only expose tokens on the client side when necessary, and
+      handle sensitive data on the server side as much as possible.
+    </li>
+  </ol>
+  <p><strong>Real-world Example</strong>:</p>
+  <ul>
+    <li>
+      <strong>Background</strong>: A web application built with React stores user authentication
+      tokens in localStorage.
+    </li>
+    <li>
+      <strong>Problem</strong>: Due to an XSS attack, malicious scripts can access and steal these
+      tokens.
+    </li>
+    <li>
+      <strong>Solution</strong>: Switch to securely storing tokens in HTTP-only cookies, thereby
+      reducing direct client-side access to sensitive data.
+    </li>
+  </ul>
+  <pre>
+    <code>
+class UserProfile extends React.Component {
+  componentDidMount() {
+    // Highly insecure: Exposing a security token in client-side code
+    const token = 'secret-security-token';
+    fetch(`/api/userdata?token=${token}`)
+      .then(response => response.json())
+      .then(data => this.setState({ userData: data }));
+  }
+
+  render() {
+    // Render user profile
+  }
+}
+    </code>
+  </pre>
+
+  <h2>3. Where is it going?</h2>
+  <p>
+    <strong>Challenges</strong>: As React applications become more complex, developers need to
+    remain vigilant about securely storing and transmitting tokens.
+  </p>
+  <p>
+    <strong>Future Developments</strong>: There might be more tools and libraries developed to help
+    securely manage and store sensitive tokens in React applications.
+  </p>
+</article>

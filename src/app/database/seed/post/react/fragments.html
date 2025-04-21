@@ -1,0 +1,93 @@
+<article>
+  <section>
+    <h2>1. Where does it come from?</h2>
+    <p>
+      React Fragments were introduced in React version 16 as a feature to solve specific rendering
+      issues.
+    </p>
+    <ul>
+      <li>
+        <strong>Origin</strong>: Before this, React components had to return a single root element.
+        This limitation hindered certain layout implementations and could lead to unnecessary DOM
+        elements.
+      </li>
+      <li>
+        <strong>Comparison</strong>: Before the introduction of Fragments, developers often used
+        extra <code>&lt;div&gt;</code> or other elements to wrap component content, even when these
+        elements were not always necessary in the DOM.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. What is it?</h2>
+    <p>
+      React Fragments allow components to return multiple elements without the need for an
+      additional DOM element to wrap them.
+    </p>
+    <ul>
+      <li>
+        <strong>Method of Solution</strong>: Fragments act like an invisible container that can hold
+        multiple child elements but do not produce extra markup in the DOM structure.
+      </li>
+      <li>
+        <strong>Three Key Principles</strong>:
+        <ol>
+          <li>
+            Use Fragments when you need to return multiple elements without adding extra DOM nodes.
+          </li>
+          <li>
+            Declare Fragments using <code>&lt;React.Fragment&gt;</code> or its shorthand form
+            <code>&lt;&gt;</code>.
+          </li>
+          <li>
+            Fragments are particularly useful in components like tables and lists that require
+            specific structures.
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p><strong>Example</strong>:</p>
+    <dl>
+      <dt>Background</dt>
+      <dd>
+        Suppose you need to return multiple <code>&lt;li&gt;</code> elements in a component, but do
+        not want them wrapped in an additional <code>&lt;div&gt;</code> or other elements.
+      </dd>
+      <dt>Application</dt>
+      <dd>Use Fragments to directly return these <code>&lt;li&gt;</code> elements.</dd>
+      <dt>Code Example</dt>
+      <dd>
+        <pre><code>
+function ListItem() {
+    return (
+        &lt;React.Fragment&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+        &lt;/React.Fragment&gt;
+    );
+}
+                </code></pre>
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>3. Where is it going?</h2>
+    <ul>
+      <li>
+        <strong>Limitations</strong>: Fragments are invisible and cannot be used as containers with
+        accessible attributes, nor can they receive styles.
+      </li>
+      <li>
+        <strong>Direction for Optimization</strong>: Continue exploring different component design
+        patterns to optimize component structure and reduce unnecessary DOM nodes.
+      </li>
+      <li>
+        <strong>Future Development</strong>: As the React ecosystem continues to evolve, the use of
+        Fragments might become more widespread, helping developers to handle components and DOM
+        structures more flexibly.
+      </li>
+    </ul>
+  </section>
+</article>

@@ -1,0 +1,59 @@
+<article>
+  <h2>1. What?</h2>
+  <p>
+    <strong>Origin</strong>: Callback hell originates from the use of callback functions in
+    asynchronous programming, especially in environments like Node.js.
+  </p>
+  <p>
+    <strong>Comparative State</strong>: Before callback hell became a recognized issue, asynchronous
+    operations were handled primarily with callbacks. After the recognition of callback hell,
+    alternative approaches like Promises and async/await were developed.
+  </p>
+
+  <h2>2. What is it?</h2>
+  <p>
+    <strong>Essence</strong>: Callback hell refers to a situation where callbacks are nested within
+    other callbacks several levels deep.
+  </p>
+  <ul>
+    <li>
+      <strong>Nested Structure</strong>: The deeper the nesting, the more complex the callback hell.
+    </li>
+    <li><strong>Error Handling</strong>: Managing errors in callback hell can be challenging.</li>
+    <li>
+      <strong>Readability and Maintenance</strong>: Deeply nested callbacks reduce code readability
+      and maintainability.
+    </li>
+  </ul>
+  <p><strong>Real-world Example</strong>:</p>
+  <p>Background: Performing multiple asynchronous file operations in Node.js.</p>
+  <p>
+    Application: Reading a file, then writing to another file, each step nested in the previous
+    callback.
+  </p>
+  <pre>
+    <code class="language-javascript">
+    fs.readFile('file1.txt', function(err, data) {
+      if (err) throw err;
+      fs.writeFile('file2.txt', data, function(err) {
+        if (err) throw err;
+        console.log('File written successfully');
+      });
+    });
+    </code>
+    </pre>
+
+  <h2>3. Where is it going?</h2>
+  <p>
+    <strong>Limitations</strong>: The main limitation of callback hell is its impact on code
+    quality.
+  </p>
+  <p>
+    <strong>Optimization Direction</strong>: Developers have shifted towards using Promises and
+    async/await.
+  </p>
+  <p>
+    <strong>Future Direction</strong>: The trend is to avoid callback hell through better practices
+    and newer features like async/await.
+  </p>
+</article>

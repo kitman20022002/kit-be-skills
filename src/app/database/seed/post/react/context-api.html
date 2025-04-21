@@ -1,0 +1,106 @@
+<article>
+  <section>
+    <h2>1. Where does it come from?</h2>
+    <p>
+      The Context API is a feature of React designed to solve the problem of data transmission in
+      the component tree.
+    </p>
+    <ul>
+      <li>
+        <strong>Origin</strong>: In the early versions of React, passing data across multiple layers
+        of components required prop drilling, which was cumbersome and inefficient in complex
+        component trees.
+      </li>
+      <li>
+        <strong>Comparison</strong>: Before the Context API, React applications often relied on
+        additional state management libraries (like Redux) to manage cross-component states. The
+        introduction of the Context API allows for internal state management within React in less
+        complex scenarios without using these libraries.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. What is it?</h2>
+    <p>
+      The Context API allows developers to share values across components without having to
+      explicitly pass props through every level of the component tree.
+    </p>
+    <ul>
+      <li>
+        <strong>Method of Solution</strong>: It works by creating a Context object, which can be
+        accessed at any point in the tree.
+      </li>
+      <li>
+        <strong>Three Key Principles</strong>:
+        <ol>
+          <li>Avoid overusing Context; it should not be used for passing all states.</li>
+          <li>Maintain the independence and reusability of components when using it.</li>
+          <li>Consider using Context when multiple components need to access the same data.</li>
+        </ol>
+      </li>
+    </ul>
+    <p><strong>Example</strong>:</p>
+    <dl>
+      <dt>Background</dt>
+      <dd>
+        Suppose there is a theme switching feature that needs to share theme settings across
+        multiple components.
+      </dd>
+      <dt>Application</dt>
+      <dd>
+        Use the Context API to create a theme Context, which can be accessed and modified in any
+        child component.
+      </dd>
+      <dt>Code Example</dt>
+      <dd>
+        <pre><code>
+const ThemeContext = React.createContext('light');
+
+class App extends React.Component {
+    render() {
+        return (
+            &lt;ThemeContext.Provider value="dark"&gt;
+                &lt;Toolbar /&gt;
+            &lt;/ThemeContext.Provider&gt;
+        );
+    }
+}
+
+function Toolbar(props) {
+    return (
+        &lt;div&gt;
+            &lt;ThemedButton /&gt;
+        &lt;/div&gt;
+    );
+}
+
+class ThemedButton extends React.Component {
+    static contextType = ThemeContext;
+    render() {
+        return &lt;Button theme={this.context} /&gt;;
+    }
+}
+                </code></pre>
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>3. Where is it going?</h2>
+    <ul>
+      <li>
+        <strong>Limitations</strong>: The Context API is not suitable for data that updates
+        frequently, as it may lead to performance issues.
+      </li>
+      <li>
+        <strong>Direction for Optimization</strong>: Combine the use of the Context API with other
+        state management methods (like Hooks) to improve performance and code maintainability.
+      </li>
+      <li>
+        <strong>Future Development</strong>: Future versions of React may further optimize the
+        performance of the Context API and add more related features and improvements.
+      </li>
+    </ul>
+  </section>
+</article>

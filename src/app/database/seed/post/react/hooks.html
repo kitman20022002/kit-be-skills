@@ -1,0 +1,101 @@
+<article>
+  <section>
+    <h2>1. Where does it come from?</h2>
+    <p>
+      Hooks are a new feature introduced in React version 16.8, allowing the use of state and other
+      React features in functional components.
+    </p>
+    <ul>
+      <li>
+        <strong>Origin</strong>: Before Hooks, React's functional components couldn't use state and
+        lifecycle features, which were only available in class components. The introduction of Hooks
+        removed this limitation.
+      </li>
+      <li>
+        <strong>Comparison</strong>: Before Hooks, React developers had to choose between functional
+        and class components. With Hooks, functional components gained abilities similar to class
+        components, like state management and lifecycle control.
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. What is it?</h2>
+    <p>
+      Hooks are a set of functions that allow developers to "hook into" React state and lifecycle
+      features within functional components.
+    </p>
+    <ul>
+      <li>
+        <strong>Method of Solution</strong>: They offer a more concise and intuitive way to manage
+        state and side effects without writing class components.
+      </li>
+      <li>
+        <strong>Three Key Principles</strong>:
+        <ol>
+          <li>
+            Only use Hooks at the top level, not inside loops, conditions, or nested functions.
+          </li>
+          <li>
+            Only call Hooks from React functions, avoid calling them from regular JavaScript
+            functions.
+          </li>
+          <li>
+            When using Hooks for component features, focus on separation of concerns rather than
+            lifecycle methods.
+          </li>
+        </ol>
+      </li>
+    </ul>
+    <p><strong>Example</strong>:</p>
+    <dl>
+      <dt>Background</dt>
+      <dd>
+        Suppose you need to build a component that displays a counter, which can be incremented and
+        decremented.
+      </dd>
+      <dt>Application</dt>
+      <dd>
+        Use the `useState` Hook to manage the counter's state, and the `useEffect` Hook to handle
+        side effects after the component updates.
+      </dd>
+      <dt>Code Example</dt>
+      <dd>
+        <pre><code>
+    function Counter() {
+        const [count, setCount] = useState(0);
+    
+        useEffect(() => {
+            document.title = `You clicked ${count} times`;
+        });
+    
+        return (
+            &lt;div&gt;
+                &lt;p&gt;You clicked {count} times&lt;/p&gt;
+                &lt;button onClick={() => setCount(count + 1)}&gt;Click me&lt;/button&gt;
+            &lt;/div&gt;
+        );
+    }
+                    </code></pre>
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>3. Where is it going?</h2>
+    <ul>
+      <li>
+        <strong>Limitations</strong>: For complex state logic, Hooks may not be as intuitive as
+        class components, especially in large projects.
+      </li>
+      <li>
+        <strong>Direction for Optimization</strong>: Continue to develop and improve the Hooks API
+        for easier management of complex states and side effects.
+      </li>
+      <li>
+        <strong>Future Development</strong>: We may see more specialized Hooks in the future,
+        providing more custom functionality and optimizations to meet different development needs.
+      </li>
+    </ul>
+  </section>
+</article>

@@ -1,0 +1,65 @@
+<article>
+  <h2>2. Where Does It Come From?</h2>
+  <p>
+    <strong>Origin</strong>: Class loaders in Java are components used to load class files (‘.class’
+    files) into the JVM (Java Virtual Machine). They were created to meet the need for dynamic
+    loading and linking of class files.
+  </p>
+  <ul>
+    <li>
+      Before Appearance: Before class loaders, all classes had to be loaded and linked at once when
+      a Java program started, which limited the flexibility and extensibility of Java programs.
+    </li>
+    <li>
+      After Appearance: The introduction of class loaders enabled Java programs to load classes
+      dynamically on demand, enhancing program modularity and flexibility.
+    </li>
+  </ul>
+
+  <h2>2. What Is It?</h2>
+  <hr />
+  <p>
+    <strong>Concept Explanation</strong>: Class loaders are responsible for reading Java bytecode
+    and converting it into classes executable by the JVM. They load class files as needed, avoiding
+    the overhead of loading all classes at once.
+  </p>
+  <p><strong>Three Important Principles</strong>:</p>
+  <ol>
+    <li>
+      Delegation Model: By default, a class loader delegates the loading task to its parent loader
+      and loads the class itself only if the parent loader fails.
+    </li>
+    <li>
+      Visibility: A child loader can access classes loaded by its parent loader, but the parent
+      loader cannot access classes loaded by the child loader.
+    </li>
+    <li>
+      Uniqueness: The same class file, once loaded by the same class loader, exists as only one
+      class instance in the JVM.
+    </li>
+  </ol>
+  <p><strong>Real-World Example</strong>:</p>
+  <ul>
+    <li>Background: A large application needs to dynamically load plugins.</li>
+    <li>
+      Solution: The application uses custom class loaders to load different plugins, ensuring that
+      the plugins do not interfere with each other and achieving high modularity.
+    </li>
+  </ul>
+
+  <h2>3. Where Is It Going?</h2>
+  <hr />
+  <p>
+    <strong>Limitations</strong>: The complexity of class loaders can lead to issues like class
+    conflicts and memory leaks.
+  </p>
+  <p>
+    <strong>Optimization Direction</strong>: Currently, the industry is optimizing class loader
+    performance and security, such as faster loading speeds and better isolation.
+  </p>
+  <p>
+    <strong>Future Development</strong>: Future developments may include more intelligent class
+    loading strategies, like AI-based predictive loading, and improved class loading efficiency in
+    cloud environments.
+  </p>
+</article>

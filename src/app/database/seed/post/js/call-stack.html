@@ -1,0 +1,68 @@
+<article>
+  <h2>1. Where Does It Come From?</h2>
+  <p>
+    <strong>Origin and Background</strong>: The concept of the Call Stack originates from the
+    "stack" data structure in computer science. In programming and computer memory management, a
+    stack is used to record the sequence of function calls during program execution.
+  </p>
+  <p>
+    <strong>Comparative State</strong>: Before the widespread understanding of the call stack, the
+    mechanism of function calling and returning in programs was harder to track and manage. The
+    introduction of the call stack provided a clear and orderly way to manage program execution.
+  </p>
+
+  <h2>2. What Is It?</h2>
+  <p>
+    <strong>Essential Explanation</strong>: In programming languages like JavaScript, the call stack
+    is a stack structure that records the calls and execution of functions. When a function is
+    called, it is added to the top of the stack; when the function returns, it is removed from the
+    top of the stack.
+  </p>
+  <p><strong>Key Principles</strong>:</p>
+  <ol>
+    <li>
+      <strong>Last In, First Out</strong>: The stack follows the "Last In, First Out" (LIFO)
+      principle, where the last function pushed onto the stack is the first to complete execution
+      and be popped off.
+    </li>
+    <li>
+      <strong>Limited Size</strong>: The size of the call stack is limited, and exceeding its
+      capacity can lead to a "stack overflow" error.
+    </li>
+    <li>
+      <strong>Record of Function Execution</strong>: Each function call has its context and
+      execution state, all of which are recorded in the stack.
+    </li>
+  </ol>
+  <p><strong>Real-World Example</strong>:</p>
+  <pre><code class="language-javascript">
+        function firstFunction() {
+            secondFunction();
+            console.log('Executing first function');
+        }
+
+        function secondFunction() {
+            console.log('Executing second function');
+        }
+
+        firstFunction();
+        // Outputs: "Executing second function"
+        // Then outputs: "Executing first function"
+    </code></pre>
+
+  <h2>3. Where Is It Going?</h2>
+  <p>
+    <strong>Limitations</strong>: The size limit of the call stack means that deeply nested or
+    infinitely recursive function calls can lead to stack overflow errors.
+  </p>
+  <p>
+    <strong>Optimization Direction</strong>: Developers need to optimize recursive logic, avoid
+    deeply nested calls, or use techniques like tail call optimization to reduce stack usage.
+  </p>
+  <p>
+    <strong>Future Developments</strong>: With the evolution of programming languages and runtime
+    environments, the management and optimization of the call stack may become more efficient, for
+    example, through improved error handling and debugging tools to better manage and visualize the
+    call stack.
+  </p>
+</article>
