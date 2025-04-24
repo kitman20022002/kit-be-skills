@@ -15,16 +15,6 @@ For more info please refer to
 - Compression (Enabling gzip compression in Express.js)
 - Swagger (API docs)
 
-## Roadmap
-
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-
-See the [open issues](https://010001.atlassian.net/jira/software/projects/TEC/boards/2/backlog) for a full list of proposed features (and known issues).
-
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
