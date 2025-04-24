@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import express from 'express';
-import { logger } from '../../../loaders/logger';
-import { NextFunction } from 'express';
+// import { logger } from '../../../loaders/logger';
+// import { NextFunction } from 'express';
 import * as siteMapController from '../../controllers/v1/sitemapController';
 import * as conceptController from '../../controllers/v1/conceptController';
 import * as typesController from '../../controllers/v1/typesController';
