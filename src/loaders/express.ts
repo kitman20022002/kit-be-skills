@@ -1,4 +1,3 @@
-import { Request, Response } from 'express';
 import express, { NextFunction } from 'express';
 import rateLimit from 'express-rate-limit';
 const apiRouterV1 = require('../app/routes/v1/api');
@@ -17,7 +16,12 @@ const limiter = rateLimit({
 
 module.exports = () => {
   const app = express();
-
+  app.use((req, res, next) => {
+    res.setTimeout(30000, () => {
+      res.status(status.REQUEST_TIMEOUT).send('Request timeout');
+    });
+    next();
+  });
   //global middleware
   app.use(compression());
   app.use(cors());
@@ -27,10 +31,12 @@ module.exports = () => {
   }
   app.use(helmet());
   app.use(`${config.api.prefix}/v1`, apiRouterV1);
-  app.use((err: Error, req: express.Request, res: express.Response, next: NextFunction) => {
+  app.use((err: Error, req: express.Request, res: express.Response) => {
     errorHandler.handleError(err, res);
-    res.status(status.INTERNAL_SERVER_ERROR).send();
-    next();
+
+    if (!res.headersSent) {
+      res.status(status.INTERNAL_SERVER_ERROR).send();
+    }
   });
 
   return app;

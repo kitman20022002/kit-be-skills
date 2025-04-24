@@ -12,7 +12,7 @@
     "coverage": "nyc --reporter=text npm test",
     "init-app": "node dist/src/app/console/init.js",
     "build": "npx tsc && npm run build-html",
-    "start": "node  dist/index.js",
+    "start": "node --inspect dist/index.js",
     "dev": "concurrently \"npm run build-html\" \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
     "lint": "eslint src/",
     "prepare": "husky install",
