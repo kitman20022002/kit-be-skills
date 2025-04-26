@@ -1,4 +1,4 @@
-import express, { NextFunction } from 'express';
+import express from 'express';
 import rateLimit from 'express-rate-limit';
 const apiRouterV1 = require('../app/routes/v1/api');
 const config = require('../app/config/app');
